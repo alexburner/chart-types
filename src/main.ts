@@ -11,29 +11,31 @@ import { surplusDefictVL } from './charts/surplus-deficit-vl'
 const appEl = document.getElementById('app')
 if (!appEl) throw new Error('Missing #app')
 
-document.title = document.location.hash.substring(1) || 'chart-types'
+const hash = document.location.hash.substring(1)
 
-switch (document.location.hash) {
-  case '#diverging-bar-vl':
+document.title = hash || 'chart-types'
+
+switch (hash) {
+  case 'diverging-bar-vl':
     divergingBarVL(appEl)
     break
-  case '#diverging-bar-b':
+  case 'diverging-bar-b':
     divergingBarB(appEl)
     break
-  case '#surplus-deficit-vl':
+  case 'surplus-deficit-vl':
     surplusDefictVL(appEl)
     break
-  case '#surplus-deficit-b':
+  case 'surplus-deficit-b':
     surplusDefictB(appEl)
     break
-  case '#column-line-vl':
+  case 'column-line-vl':
     columnLineVL(appEl)
     break
-  case '#column-line-b':
+  case 'column-line-b':
     columnLineB(appEl)
     break
   default:
-    if (document.location.hash.length > 1) {
-      alert(`No case for "${document.location.hash}"`)
+    if (hash.length) {
+      alert(`No case for "#${hash}"`)
     }
 }
