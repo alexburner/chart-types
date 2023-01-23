@@ -9,6 +9,8 @@ import { surplusDefictVL } from './charts/surplus-deficit-vl'
 const appEl = document.getElementById('app')
 if (!appEl) throw new Error('Missing #app')
 
+document.title = document.location.hash.substring(1) || 'chart-types'
+
 switch (document.location.hash) {
   case '#diverging-bar-vl':
     divergingBarVL(appEl)
