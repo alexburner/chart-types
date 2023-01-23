@@ -1,8 +1,11 @@
+import { setupCounter } from './counter'
 import './style.css'
 import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+const appEl = document.getElementById('app')
+if (!appEl) throw new Error('Missing #app')
+
+appEl.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -20,4 +23,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const buttonEl = document.getElementById('counter')
+if (!buttonEl) throw new Error('Missing #counter')
+if (!(buttonEl instanceof HTMLButtonElement)) throw new Error('Bad Button')
+
+setupCounter(buttonEl)
