@@ -1,6 +1,8 @@
 import 'bisonica/styles.css'
 import './style.css'
 
+import { columnLineB } from './charts/column-line-b'
+import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
@@ -24,4 +26,14 @@ switch (document.location.hash) {
   case '#surplus-deficit-b':
     surplusDefictB(appEl)
     break
+  case '#column-line-vl':
+    columnLineVL(appEl)
+    break
+  case '#column-line-b':
+    columnLineB(appEl)
+    break
+  default:
+    if (document.location.hash.length > 1) {
+      alert(`No case for "${document.location.hash}"`)
+    }
 }
