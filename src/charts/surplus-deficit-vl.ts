@@ -1,13 +1,8 @@
-// @ts-expect-error — No types for lib
-import { chart } from 'bisonica'
-import { select } from 'd3-selection'
+import embed from 'vega-embed'
 
-export const divergingBarB = (el: HTMLElement) => {
-  const spec = {
-    $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
-    title: { text: 'Diverging Bar' },
-    description:
-      'A bar chart with negative values. We can hide the axis domain line, and instead use a conditional grid color to draw a zero baseline.',
+export const surplusDefictVL = (el: HTMLElement) => {
+  void embed(el, {
+    $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
     data: {
       values: [
         { a: 'A', b: -28 },
@@ -21,9 +16,11 @@ export const divergingBarB = (el: HTMLElement) => {
         { a: 'I', b: 52 },
       ],
     },
-    mark: 'bar',
+    width: 300,
+    height: 200,
+    mark: 'area',
     encoding: {
-      y: {
+      x: {
         field: 'a',
         type: 'nominal',
         axis: {
@@ -33,7 +30,7 @@ export const divergingBarB = (el: HTMLElement) => {
           labelPadding: 4,
         },
       },
-      x: {
+      y: {
         field: 'b',
         type: 'quantitative',
         axis: {
@@ -44,11 +41,5 @@ export const divergingBarB = (el: HTMLElement) => {
         },
       },
     },
-  }
-
-  const dimensions = { x: 500, y: 500 }
-  // eslint-disable-next-line
-  const renderer = chart(spec, dimensions)
-  // eslint-disable-next-line
-  renderer(select(el))
+  })
 }
