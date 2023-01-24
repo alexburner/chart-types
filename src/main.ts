@@ -1,6 +1,8 @@
 import 'bisonica/styles.css'
 import './style.css'
 
+import { bubbleB } from './charts/bubble-b'
+import { bubbleVL } from './charts/bubble-vl'
 import { columnLineB } from './charts/column-line-b'
 import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
@@ -34,8 +36,14 @@ switch (hash) {
   case 'column-line-b':
     columnLineB(appEl)
     break
+  case 'bubble-vl':
+    bubbleVL(appEl)
+    break
+  case 'bubble-b':
+    bubbleB(appEl)
+    break
   default:
     if (hash.length) {
-      alert(`No case for "#${hash}"`)
+      appEl.innerHTML = `No switch case for #${hash}`
     }
 }
