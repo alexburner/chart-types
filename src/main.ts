@@ -1,6 +1,8 @@
 import 'bisonica/styles.css'
 import './style.css'
 
+import { barcodeB } from './charts/barcode-b'
+import { barcodeVL } from './charts/barcode-vl'
 import { bubbleB } from './charts/bubble-b'
 import { bubbleVL } from './charts/bubble-vl'
 import { bumpB } from './charts/bump-b'
@@ -57,6 +59,12 @@ switch (hash) {
     break
   case 'bump-b':
     bumpB(appEl)
+    break
+  case 'barcode-vl':
+    barcodeVL(appEl)
+    break
+  case 'barcode-b':
+    barcodeB(appEl)
     break
   default:
     if (hash.length) {
