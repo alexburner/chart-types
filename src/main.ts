@@ -3,6 +3,8 @@ import './style.css'
 
 import { barcodeB } from './charts/barcode-b'
 import { barcodeVL } from './charts/barcode-vl'
+import { boxB } from './charts/box-b'
+import { boxVL } from './charts/box-vl'
 import { bubbleB } from './charts/bubble-b'
 import { bubbleVL } from './charts/bubble-vl'
 import { bumpB } from './charts/bump-b'
@@ -65,6 +67,12 @@ switch (hash) {
     break
   case 'barcode-b':
     barcodeB(appEl)
+    break
+  case 'box-vl':
+    boxVL(appEl)
+    break
+  case 'box-b':
+    boxB(appEl)
     break
   default:
     if (hash.length) {
