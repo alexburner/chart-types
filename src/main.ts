@@ -19,6 +19,8 @@ import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
 import { lollipopB } from './charts/lollipop-b'
 import { lollipopVL } from './charts/lollipop-vl'
+import { pairedBarB } from './charts/paired-bar-b'
+import { pairedBarVL } from './charts/paired-bar-vl'
 import { priestelyB } from './charts/priestely-b'
 import { priestelyVL } from './charts/priestely-vl'
 import { projectionB } from './charts/projection-b'
@@ -121,6 +123,12 @@ switch (hash) {
     break
   case 'streamgraph-b':
     streamgraphB(appEl)
+    break
+  case 'paired-bar-vl':
+    pairedBarVL(appEl)
+    break
+  case 'paired-bar-b':
+    pairedBarB(appEl)
     break
   default:
     if (hash.length) {
