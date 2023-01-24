@@ -11,12 +11,16 @@ import { bumpB } from './charts/bump-b'
 import { bumpVL } from './charts/bump-vl'
 import { candlestickB } from './charts/candlestick-b'
 import { candlestickVL } from './charts/candlestick-vl'
+import { circleTimelineB } from './charts/circle-timeline-b'
+import { circleTimelineVL } from './charts/circle-timeline-vl'
 import { columnLineB } from './charts/column-line-b'
 import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
 import { lollipopB } from './charts/lollipop-b'
 import { lollipopVL } from './charts/lollipop-vl'
+import { priestelyB } from './charts/priestely-b'
+import { priestelyVL } from './charts/priestely-vl'
 import { projectionB } from './charts/projection-b'
 import { projectionVL } from './charts/projection-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
@@ -89,6 +93,18 @@ switch (hash) {
     break
   case 'projection-b':
     projectionB(appEl)
+    break
+  case 'priestely-vl':
+    priestelyVL(appEl)
+    break
+  case 'priestely-b':
+    priestelyB(appEl)
+    break
+  case 'circle-timeline-vl':
+    circleTimelineVL(appEl)
+    break
+  case 'circle-timeline-b':
+    circleTimelineB(appEl)
     break
   default:
     if (hash.length) {
