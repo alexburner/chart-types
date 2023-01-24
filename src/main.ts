@@ -17,6 +17,8 @@ import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
 import { lollipopB } from './charts/lollipop-b'
 import { lollipopVL } from './charts/lollipop-vl'
+import { projectionB } from './charts/projection-b'
+import { projectionVL } from './charts/projection-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
 import { surplusDefictVL } from './charts/surplus-deficit-vl'
 
@@ -81,6 +83,12 @@ switch (hash) {
     break
   case 'candlestick-b':
     candlestickB(appEl)
+    break
+  case 'projection-vl':
+    projectionVL(appEl)
+    break
+  case 'projection-b':
+    projectionB(appEl)
     break
   default:
     if (hash.length) {
