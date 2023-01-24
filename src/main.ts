@@ -3,6 +3,8 @@ import './style.css'
 
 import { bubbleB } from './charts/bubble-b'
 import { bubbleVL } from './charts/bubble-vl'
+import { bumpB } from './charts/bump-b'
+import { bumpVL } from './charts/bump-vl'
 import { columnLineB } from './charts/column-line-b'
 import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
@@ -49,6 +51,12 @@ switch (hash) {
     break
   case 'lollipop-b':
     lollipopB(appEl)
+    break
+  case 'bump-vl':
+    bumpVL(appEl)
+    break
+  case 'bump-b':
+    bumpB(appEl)
     break
   default:
     if (hash.length) {
