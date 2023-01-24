@@ -7,6 +7,8 @@ import { columnLineB } from './charts/column-line-b'
 import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
+import { lollipopB } from './charts/lollipop-b'
+import { lollipopVL } from './charts/lollipop-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
 import { surplusDefictVL } from './charts/surplus-deficit-vl'
 
@@ -41,6 +43,12 @@ switch (hash) {
     break
   case 'bubble-b':
     bubbleB(appEl)
+    break
+  case 'lollipop-vl':
+    lollipopVL(appEl)
+    break
+  case 'lollipop-b':
+    lollipopB(appEl)
     break
   default:
     if (hash.length) {
