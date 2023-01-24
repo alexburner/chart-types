@@ -25,6 +25,8 @@ import { projectionB } from './charts/projection-b'
 import { projectionVL } from './charts/projection-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
 import { surplusDefictVL } from './charts/surplus-deficit-vl'
+import { verticalLineB } from './charts/vertical-line-b'
+import { verticalLineVL } from './charts/vertical-line-vl'
 
 const appEl = document.getElementById('app')
 if (!appEl) throw new Error('Missing #app')
@@ -105,6 +107,12 @@ switch (hash) {
     break
   case 'circle-timeline-b':
     circleTimelineB(appEl)
+    break
+  case 'vertical-line-vl':
+    verticalLineVL(appEl)
+    break
+  case 'vertical-line-b':
+    verticalLineB(appEl)
     break
   default:
     if (hash.length) {
