@@ -9,6 +9,8 @@ import { bubbleB } from './charts/bubble-b'
 import { bubbleVL } from './charts/bubble-vl'
 import { bumpB } from './charts/bump-b'
 import { bumpVL } from './charts/bump-vl'
+import { candlestickB } from './charts/candlestick-b'
+import { candlestickVL } from './charts/candlestick-vl'
 import { columnLineB } from './charts/column-line-b'
 import { columnLineVL } from './charts/column-line-vl'
 import { divergingBarB } from './charts/diverging-bar-b'
@@ -73,6 +75,12 @@ switch (hash) {
     break
   case 'box-b':
     boxB(appEl)
+    break
+  case 'candlestick-vl':
+    candlestickVL(appEl)
+    break
+  case 'candlestick-b':
+    candlestickB(appEl)
     break
   default:
     if (hash.length) {
