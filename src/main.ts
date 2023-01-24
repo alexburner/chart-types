@@ -23,6 +23,8 @@ import { priestelyB } from './charts/priestely-b'
 import { priestelyVL } from './charts/priestely-vl'
 import { projectionB } from './charts/projection-b'
 import { projectionVL } from './charts/projection-vl'
+import { streamgraphB } from './charts/streamgraph-b'
+import { streamgraphVL } from './charts/streamgraph-vl'
 import { surplusDefictB } from './charts/surplus-deficit-b'
 import { surplusDefictVL } from './charts/surplus-deficit-vl'
 import { verticalLineB } from './charts/vertical-line-b'
@@ -113,6 +115,12 @@ switch (hash) {
     break
   case 'vertical-line-b':
     verticalLineB(appEl)
+    break
+  case 'streamgraph-vl':
+    streamgraphVL(appEl)
+    break
+  case 'streamgraph-b':
+    streamgraphB(appEl)
     break
   default:
     if (hash.length) {
