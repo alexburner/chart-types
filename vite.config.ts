@@ -12,4 +12,8 @@ export default defineConfig({
       },
     }),
   ],
+  // For github pages
+  // -> https://vitejs.dev/guide/static-deploy.html#github-pages
+  base: '/chart-types/',
+  build: { outDir: 'docs' },
 })
