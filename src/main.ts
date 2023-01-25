@@ -19,6 +19,8 @@ import { divergingBarB } from './charts/diverging-bar-b'
 import { divergingBarVL } from './charts/diverging-bar-vl'
 import { lollipopB } from './charts/lollipop-b'
 import { lollipopVL } from './charts/lollipop-vl'
+import { mosaicB } from './charts/mosaic-b'
+import { mosaicVL } from './charts/mosaic-vl'
 import { pairedBarB } from './charts/paired-bar-b'
 import { pairedBarVL } from './charts/paired-bar-vl'
 import { priestelyB } from './charts/priestely-b'
@@ -129,6 +131,12 @@ switch (hash) {
     break
   case 'paired-bar-b':
     pairedBarB(appEl)
+    break
+  case 'mosaic-vl':
+    mosaicVL(appEl)
+    break
+  case 'mosaic-b':
+    mosaicB(appEl)
     break
   default:
     if (hash.length) {
