@@ -7,6 +7,8 @@ import { boxB } from './charts/box-b'
 import { boxVL } from './charts/box-vl'
 import { bubbleB } from './charts/bubble-b'
 import { bubbleVL } from './charts/bubble-vl'
+import { bulletB } from './charts/bullet-b'
+import { bulletVL } from './charts/bullet-vl'
 import { bumpB } from './charts/bump-b'
 import { bumpVL } from './charts/bump-vl'
 import { candlestickB } from './charts/candlestick-b'
@@ -35,6 +37,8 @@ import { surplusDefictB } from './charts/surplus-deficit-b'
 import { surplusDefictVL } from './charts/surplus-deficit-vl'
 import { verticalLineB } from './charts/vertical-line-b'
 import { verticalLineVL } from './charts/vertical-line-vl'
+import { waterfallB } from './charts/waterfall-b'
+import { waterfallVL } from './charts/waterfall-vl'
 
 const appEl = document.getElementById('app')
 if (!appEl) throw new Error('Missing #app')
@@ -145,6 +149,18 @@ switch (hash) {
     break
   case 'pictogram-b':
     pictogramB(appEl)
+    break
+  case 'bullet-vl':
+    bulletVL(appEl)
+    break
+  case 'bullet-b':
+    bulletB(appEl)
+    break
+  case 'waterfall-vl':
+    waterfallVL(appEl)
+    break
+  case 'waterfall-b':
+    waterfallB(appEl)
     break
   default:
     if (hash.length) {
