@@ -23,6 +23,8 @@ import { mosaicB } from './charts/mosaic-b'
 import { mosaicVL } from './charts/mosaic-vl'
 import { pairedBarB } from './charts/paired-bar-b'
 import { pairedBarVL } from './charts/paired-bar-vl'
+import { pictogramB } from './charts/pictogram-b'
+import { pictogramVL } from './charts/pictogram-vl'
 import { priestelyB } from './charts/priestely-b'
 import { priestelyVL } from './charts/priestely-vl'
 import { projectionB } from './charts/projection-b'
@@ -137,6 +139,12 @@ switch (hash) {
     break
   case 'mosaic-b':
     mosaicB(appEl)
+    break
+  case 'pictogram-vl':
+    pictogramVL(appEl)
+    break
+  case 'pictogram-b':
+    pictogramB(appEl)
     break
   default:
     if (hash.length) {
