@@ -5,27 +5,27 @@ import './style.css'
 const appEl = document.getElementById('app')
 if (!appEl) throw new Error('Missing #app')
 
-const locationHash = document.location.hash.substring(1)
+const currentChartKey = document.location.search.substring(1)
 
-document.title = locationHash || 'chart-types'
+document.title = currentChartKey || 'chart-types'
 
-const chartFn = chartFns[locationHash]
+const chartFn = chartFns[currentChartKey]
 
-if (!chartFn && locationHash.length) {
+if (!chartFn && currentChartKey.length) {
   // 404
-  appEl.innerHTML = `No chart for #${locationHash}`
+  appEl.innerHTML = `No chart for #${currentChartKey}`
 } else if (chartFn) {
   // chart
   chartFn(appEl)
 } else {
   // index
-  const chartHashes = Object.keys(chartFns).sort()
+  const chartKeys = Object.keys(chartFns).sort()
   const ul = document.createElement('ul')
-  chartHashes.forEach((chartHash) => {
+  chartKeys.forEach((chartKey) => {
     const li = document.createElement('li')
     const a = document.createElement('a')
-    a.textContent = chartHash
-    a.href = `/#${chartHash}`
+    a.textContent = chartKey
+    a.href = `?${chartKey}`
     li.appendChild(a)
     ul.appendChild(li)
   })
